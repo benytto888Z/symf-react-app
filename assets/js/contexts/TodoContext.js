@@ -8,14 +8,19 @@ class TodoContextProvider extends Component {
         super();
         this.state = {
             todos:[
-                {name: 'Faire quelque chose'},
+                {name: 'Faire une marche'},
                 ],
         };
     }
 
     //create
-    createTodo(){
-
+    createTodo(e,todo){
+        e.preventDefault();
+        let data = [...this.state.todos,todo];
+       // data.push(todo);
+        this.setState({
+            todos:data,
+        })
     }
     //read
     readTodo(){
