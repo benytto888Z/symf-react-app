@@ -16,8 +16,47 @@ class Todo
      */
     private $id;
 
+    /**
+     * @ORM\Column(type="string", length=10,unique=true)
+     */
+    private $task;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $description;
+
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getTask(): ?string
+    {
+        return $this->task;
+
+    }
+
+    public function setTask(string $task): self
+    {
+        $this->task = $task;
+
+        return $this;
+    }
+
+    public function toArray(){
+        return ['id'=>$this->id,'task'=>$this->task,'description'=>$this->description];
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
     }
 }
