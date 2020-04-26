@@ -4,6 +4,7 @@ import TodoContextProvider from "./contexts/TodoContext";
 import TodoTable from "./components/TodoTable";
 import {CssBaseline} from "@material-ui/core";
 import AppSnackbar from "./components/AppSnackbar";
+import '../css/app.css';
 
 class App extends Component {
     render() {

@@ -12,11 +12,11 @@ import DoneIcon from '@material-ui/icons/Done';
 import CloseIcon from '@material-ui/icons/Close';
 import IconButton from "@material-ui/core/IconButton";
 import TextField from "@material-ui/core/TextField";
-import InputAdornment from "@material-ui/core/InputAdornment";
 import DeleteDialog from "./DeleteDialog";
 import Typography from "@material-ui/core/Typography";
 
 function TodoTable() {
+
         const context = useContext(TodoContext);
         const [addTodo,setAddTodo]=useState('');
         const [addTodoDescription, setAddTodoDescription] = useState('');
@@ -44,11 +44,11 @@ function TodoTable() {
 
                 <Table>
                         <TableHead>
-                                <TableRow>
-                                    <TableCell>ID</TableCell>
-                                    <TableCell>Tâche</TableCell>
-                                    <TableCell>Description</TableCell>
-                                    <TableCell align="right">Actions</TableCell>
+                                <TableRow className="rowHeadColor">
+                                    <TableCell className="rowCellHColor" >ID</TableCell>
+                                    <TableCell className="rowCellHColor">Tâche</TableCell>
+                                    <TableCell className="rowCellHColor">Description</TableCell>
+                                    <TableCell align="right" className="rowCellHColor">Actions</TableCell>
                                 </TableRow>
                         </TableHead>
                     <TableBody>
